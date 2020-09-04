@@ -1,0 +1,19 @@
+---
+- name: Test the template
+  hosts: localhost
+  gather_facts: false
+  vars:
+
+  tasks:
+    - name: pause with render
+      pause:
+        prompt:  "{{ lookup('template', '{{ item }}' ) }}"
+      loop: "{{ lookup('fileglob', '*.j2', wantlist=True ) }}"
+
+- name: Test
+  hosts: all
+
+  tasks:
+    - debug:
+        msg: "Variable Test:  {{ test_var }}"
+        
