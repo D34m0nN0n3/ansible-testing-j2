@@ -13,7 +13,7 @@ Tested on:
 - CentOS 8 
 - Ansible = 2.9.5
 
-### Hint/Подсказка:
+### Hint:
 Run Playbook:
 `ansible-playbook playbook.yml --extra-vars <var>` or `ansible-playbook playbook.yml -e <var>`
 
