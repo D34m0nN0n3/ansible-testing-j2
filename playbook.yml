@@ -15,5 +15,5 @@
 
   tasks:
     - debug:
-        msg: "Variable Test:  {{ test_var }}"
-        
+        var: {{ test_var }}"
+      ignore_errors: yes      
