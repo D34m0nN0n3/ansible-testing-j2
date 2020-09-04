@@ -10,7 +10,7 @@
         prompt:  "{{ lookup('template', '{{ item }}') }}"
       loop: "{{ lookup('fileglob', '*.j2', wantlist=True ) }}"
 
-- name: Test
+- name: Test the vars
   hosts: all
 
   tasks:
