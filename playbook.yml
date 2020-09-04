@@ -8,7 +8,7 @@
     - name: pause with render
       pause:
         prompt:  "{{ lookup('template', '{{ item }}') }}"
-      loop: "{{ lookup('fileglob', '*.j2', wantlist=True ) }}"
+      loop: "{{ lookup('fileglob', 'templates/*.j2', wantlist=True ) }}"
 
 - name: Test the vars
   hosts: all
